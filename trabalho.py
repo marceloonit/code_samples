@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import time
+
 idade_media = 80
 
 nome = input("Entre com o seu nome: ")
@@ -9,5 +11,11 @@ while (not idade.isdigit()):
 
 idade = int(idade)
 
-print("Olá, " + nome + ", você tem apenas mais " + str(idade_media - idade) + " anos de vida!")
-print("Boa vida!!")
+restante = idade_media - idade
+
+contador = restante
+
+print("Olá, " + nome + ", você tem apenas mais " + str(restante) + " anos de vida!")
+for i in range((restante)):
+	print(str(restante - i))
+	time.sleep(1)

@@ -1,0 +1,2 @@
+# 5) Ler quatro notas de um aluno, processar e gerar media final.
+#   Imprimir o nome do aluno, as suas notas e sua media final.
