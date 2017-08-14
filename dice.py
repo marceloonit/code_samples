@@ -5,7 +5,8 @@ import random
 while True:
     try:
         guess = 0
-        while (guess < 1 or guess > 6 or guess != dice):
+        stop == 1
+        while (guess < 1 or guess > 6):
             guess = int(input("Guess a number (1-6): "))
             if guess < 1:
                 print("Números menores que 1 são inválidos. Try again.")
