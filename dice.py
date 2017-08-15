@@ -1,5 +1,35 @@
 #!/usr/bin/env python3
-import random
+# source code: https://stackoverflow.com/questions/3041986/apt-command-line-interface-like-yes-no-input
+
+import random, sys
+
+def yes_or_no(answer, default="yes"):
+
+    valid = {"yes": True, "y": True, "ye": True,
+            "no": False, "n": false}
+
+    if default is None:
+        prompt = " [y/n]"
+    elif default == "yes":
+        prompt = " [Y/n]"
+    elif default == "no":
+        prompt = " [y/N]"
+    else:
+        raise ValueError("invalid default answer: '%s'" % default)
+
+    while True:
+        sys.stdout.write(question + prompt)
+        choice = raw_input().lower()
+        if default is not None and choice == '':
+            return
+
+
+
+
+
+
+
+
 
 
 while True:
