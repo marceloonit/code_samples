@@ -16,10 +16,10 @@ while True:
         print('JA')
     else:
         tentativas -= 1
-        print('Nope, you still have more ' + str(tentativas))
+        print('Nope, you still have more ' + str(tentativas) + 'shots!')
 
     if tentativas == 0:
-        print("you ran out of trys")
+        print("you ran out of shots")
         break
 
 print("game over")
