@@ -1,9 +1,23 @@
 #!/usr/bin/env python3
 """aventura.py  - just a random exercise ... """
+
+# NOTE(onit):
+# TODO(onit):
+# XXX(onit):
+
+import time
+
 lugar = 'Avatars Home'
 
 
 while True:
+    print('loading place')
+    time.sleep(.2)
+    print('.')
+    time.sleep(.2)
+    print('.')
+    time.sleep(.1)
+    print('.')
     if lugar == 'Avatars Home':
         print('You are at home now..')
         opcao_1 = 'Street'
@@ -36,7 +50,15 @@ while True:
             continue
             print(lugar)
         elif opcao_escolhida == '2':
+            cronometro_comeco = time.time()
             resposta = int(input('Do the following math: 10 + 10: '))
+            cronometro_fim = time.time()
+
+            if cronometro_fim - cronometro_comeco > 10:
+                print('You were too slow to answer ... to back to your home!!')
+                lugar = 'Avatars Home'
+                continue
+
             if resposta == 10 + 10:
                 print(resposta)
                 lugar = 'Iate'
@@ -48,9 +70,12 @@ while True:
         elif opcao_escolhida == '3':
             print("Voce nao fez nada.")
     elif lugar == 'In your pipe of your home o.O?':
-        print('Daqui você só se dará mal.')
-        lugar = 'Inferno'
+        print('WOW, There is a mistery key')
+        print('The key is a gift to you, take it and good luck!')
+        tem_chave = True
+        lugar = 'Avatars Home'
         continue
+
     elif lugar == 'Cadeia':
         print("Voce vai ficar para sempre aqui ....")
 
