@@ -2,7 +2,9 @@
 """aventura.py  - just a random exercise ... """
 
 # NOTE(onit):
-# TODO(onit):
+# TODO(onit): historico dos lugares visitados
+# TODO(onit): Pontuacao
+# TODO(onit): funcao para menu padrão
 # XXX(onit):
 
 import time
