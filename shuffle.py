@@ -16,7 +16,7 @@ def open_door(choice):
         print('One of the not chosen door has a ' + doors_support[0].lower())
         change = input("Do you want to change your door or do you want to keep it? (change/Keep)")
         if change == 'keep':
-            message = 'Your choice is ' + str(choice) + ' just won an ' + str(doors[choice -1].upper())
+            message = 'Your choice is ' + str(choice) + ' just won an ' + str(doors[choice -1].upper()) + '\nIate was in the door ' + str(doors.index('iate') + 1)
             return message
         elif change == 'change':
             message = 'You just won an IATE in the door number ' + str(doors.index('iate') + 1)
