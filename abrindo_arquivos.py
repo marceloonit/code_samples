@@ -4,7 +4,7 @@
 #print(linhas_do_arquivo)
 
 import pprint
-lista_strip = [' ', '.', ',', '/', '\\', '-']
+lista_strip = ['.']
 
 fp = open('memoriaspostumas.txt')
 linhas_do_arquivo = list(fp)
@@ -13,13 +13,17 @@ linhas_do_arquivo = list(fp)
 count_void = 0
 count_filled = 0
 linhas_tratadas_do_arquivo = []
+#for i in range(10):
 for linha in linhas_do_arquivo:
     linha_tratada = linha
+
     for caractere in lista_strip:
+        print(caractere)
         linha_tratada = linha_tratada.strip(caractere)
+
     if linha_tratada != '':
         linhas_tratadas_do_arquivo.append(linha_tratada)
-        
+    
 # TODO(mcsalgado): lista de palavras em vez de lista de lista de palavras      
 # imprimir o numero de ocorrencias para cada palavra
 linhas2 = []
@@ -30,9 +34,14 @@ n_letra = 0
 
 for linha in linhas_tratadas_do_arquivo:
     # transformando a linha em lista
-        linha_quebrada = linha.split()
+    linha_quebrada = linha.split()
 
-    # iterando entre as palavras contidas na linha
+
+
+
+
+
+# iterando entre as palavras contidas na linha
     for palavra in linha_quebrada:
         # tronando todas as palavras minúsculas
         palavra = palavra.lower()
@@ -57,13 +66,23 @@ for palavra in linhas2:
         ocorrencia[palavra] = 0
         ocorrencia[palavra] = 1
 
-for chave, valor in ocorrencia.items():
-    print(str(chave) + '\t\t\t\t\t\t\t' + str(valor))
+#print(ocorrencia)
+
+#for chave, valor in ocorrencia.items():
+#    print(str(chave) + '\t\t\t\t\t\t\t' + str(valor))
 
 #pprint.pprint(ocorrencia)
 #linhas3 = []
 #for linha in linhas_tratadas_do_arquivo:
 #    linha_quebrada = linha.split()
 #    linhas3.append(linha_quebrada)
+
+
+## 2-GRAM
+
+#bigrams = []
+#ipalavra_anterior = ''
+
+
 
 #print(linhas3)
